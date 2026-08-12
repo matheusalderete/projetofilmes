@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre o Projeto</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="menu.html">
+
+            Pobre Flix
+
+        </a>
+
+        <div class="ms-auto">
+
+            <a href="menu.html" class="btn btn-primary me-2">
+
+                Menu
+
+            </a>
+
+            <button onclick="logout()" class="btn btn-danger">
+
+                Sair
+
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="container">
+
+    <div class="sobre">
+
+        <h1 class="text-center mb-4">
+
+            Sobre o Projeto
+
+        </h1>
+
+        <p>
+
+            O <strong>Pobre Flix</strong> é um sistema desenvolvido para pesquisar
+            informações de filmes e séries utilizando a API OMDb.
+
+        </p>
+
+        <p>
+
+            O usuário pode realizar pesquisas pelo título de um filme ou série e
+            visualizar informações detalhadas como:
+
+        </p>
+
+        <ul>
+
+            <li>Título</li>
+            <li>Ano</li>
+            <li>Gênero</li>
+            <li>Diretor</li>
+            <li>Atores</li>
+            <li>Duração</li>
+            <li>Idioma</li>
+            <li>País</li>
+            <li>Nota IMDb</li>
+            <li>Sinopse</li>
+
+        </ul>
+
+        <hr>
+
+        <h3>Tecnologias Utilizadas</h3>
+
+        <ul>
+
+            <li>HTML5</li>
+
+            <li>CSS3</li>
+
+            <li>Bootstrap 5</li>
+
+            <li>JavaScript</li>
+
+            <li>API OMDb</li>
+
+            <li>LocalStorage</li>
+
+        </ul>
+
+        <hr>
+
+        <h3>Desenvolvedor</h3>
+
+        <p>
+
+            <strong>Aluno:</strong> Matheus Monteiro
+
+        </p>
+
+        <p>
+
+            Trabalho desenvolvido para a disciplina de
+            <strong>Desenvolvimento Web</strong>.
+
+        </p>
+
+    </div>
+
+</div>
+
+<footer>
+
+Pobre Flix © 2026
+
+</footer>
+
+<script>
+
+if(localStorage.getItem("logado")!="true"){
+
+    window.location="index.html";
+
+}
+
+function logout(){
+
+    localStorage.removeItem("logado");
+
+    window.location="index.html";
+
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

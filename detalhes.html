@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalhes do Filme</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="menu.html">
+                Pobre Flix
+            </a>
+
+            <div class="ms-auto">
+
+                <a href="pesquisa.html" class="btn btn-primary me-2">
+                    Voltar
+                </a>
+
+                <button onclick="logout()" class="btn btn-danger">
+                    Sair
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="container mt-5">
+
+        <div class="row">
+
+            <div class="col-md-4 text-center">
+
+                <img id="poster" class="poster img-fluid">
+
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="info-box">
+
+                    <h2 id="titulo"></h2>
+
+                    <hr>
+
+                    <p><strong>Ano:</strong> <span id="ano"></span></p>
+
+                    <p><strong>Gênero:</strong> <span id="genero"></span></p>
+
+                    <p><strong>Diretor:</strong> <span id="diretor"></span></p>
+
+                    <p><strong>Atores:</strong> <span id="atores"></span></p>
+
+                    <p><strong>Duração:</strong> <span id="duracao"></span></p>
+
+                    <p><strong>Idioma:</strong> <span id="idioma"></span></p>
+
+                    <p><strong>País:</strong> <span id="pais"></span></p>
+
+                    <p><strong>Nota IMDb:</strong> ⭐ <span id="nota"></span></p>
+
+                    <p><strong>Sinopse:</strong></p>
+
+                    <p><strong>Classificação:</strong> <span id="classificacao"></span></p>
+
+                    <p><strong>Lançamento:</strong> <span id="lancamento"></span></p>
+
+                    <p><strong>Bilheteria:</strong> <span id="bilheteria"></span></p>
+
+                    <p id="sinopse"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        MovieFinder © 2026
+
+    </footer>
+
+    <script>
+
+        if (localStorage.getItem("logado") != "true") {
+
+            window.location = "index.html";
+
+        }
+
+        function logout() {
+
+            localStorage.removeItem("logado");
+
+            window.location = "index.html";
+
+        }
+
+    </script>
+
+    <script src="js/detalhes.js"></script>
+
+</body>
+
+</html>
